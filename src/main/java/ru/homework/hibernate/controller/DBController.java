@@ -18,7 +18,22 @@ public class DBController {
 
     @GetMapping("/persons/by-city")
     @ResponseBody
-    public List<Persons> getPersonByCity(@RequestParam("city") String city){
+    public List<Persons> getPersonByCity(@RequestParam("city") String city) {
         return service.getPersonsByCity(city);
+    }
+
+    @GetMapping("/persons/by-age")
+    @ResponseBody
+    public List<Persons> getPersonByAge(@RequestParam("age") int age) {
+        return service.getPersonsByAge(age);
+    }
+
+    @GetMapping("/persons/by-name")
+    @ResponseBody
+    public List<Persons> getPersonByAge(
+            @RequestParam("name") String name,
+            @RequestParam("surname") String surname
+    ) {
+        return service.getPersonByNameAndSurname(name, surname);
     }
 }

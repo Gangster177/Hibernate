@@ -13,8 +13,8 @@ import org.hibernate.annotations.ColumnDefault;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(schema="homework_orm")
-public class Persons{
+@Table(schema = "homework_orm")
+public class Persons {
 
     @EmbeddedId
     private PersonId personId;

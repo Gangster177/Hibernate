@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-@Table(schema="homework_orm")
+@Table(schema = "homework_orm")
 @Embeddable
 public class PersonId implements Serializable {
     @Column(nullable = false, length = 15)
