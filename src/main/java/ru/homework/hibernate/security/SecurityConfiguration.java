@@ -20,7 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("Nik")
                 .password(encoder().encode("password1"))
-                .roles("READ","WRITE")
+                .roles("READ", "WRITE")
                 .and()
                 .withUser("Den")
                 .password(encoder().encode("password2"))
