@@ -19,4 +19,7 @@ public interface DBPersonsRepository extends JpaRepository<Persons, PersonId> {
 
     @Query("select p from Persons p where p.personId.name = :name and p.personId.surname = :surname")
     List<Persons> findByPersonIdNameAndPersonIdSurname(String name, String surname);
+
+    @Query("select p.phoneNumber from Persons p where p.personId.name = :name")
+    String findPhoneNumberByName(String name);
 }

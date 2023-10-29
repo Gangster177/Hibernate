@@ -23,4 +23,8 @@ public class DBService {
     public List<Persons> getPersonByNameAndSurname(String name, String surname) {
         return repository.findByPersonIdNameAndPersonIdSurname(name, surname);
     }
+
+    public String getPhoneByName(String name){
+        return repository.findPhoneNumberByName(name);
+    }
 }
